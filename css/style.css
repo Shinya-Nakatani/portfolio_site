@@ -23,37 +23,82 @@ img {
 /* HEADER
 ------------------------------------------------------*/
 .logo {
-    width: 210px;
-    margin-top: 14px;
+    width: 150px;
+    margin-top: 15px;
 }
 
-.main-nav {
+#header {
+    /*fixedで上部固定*/
+    position: fixed;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+
     display: flex;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    margin-top: 34px;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    color: #432;
+    text-align: center;
+    padding: 20px;
 }
 
-.main-nav li {
+/*レイアウトのCSS*/
+nav ul {
+    font-size: 1.25rem;
+    list-style: none;
+    display: flex;
+    justify-content: center
+}
+
+nav li {
     margin-left: 36px;
 }
 
-.main-nav a {
-    color: #432;
-}
-
-.main-nav a:hover {
-    color: #0bd;
-}
-
-.page-header {
-    display: flex;
-    justify-content: space-between;
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
 }
 
 .wrapper {
-    max-width: 1100px;
     margin: 0 auto;
     padding: 0 4%;
+}
+
+/*HOME
+------------------------------------------------------*/
+.home-content {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 150px 200px;
+    text-align: left;
+}
+
+/* 見出し */
+.page-title {
+    font-family: 'Philosopher', serif;
+    margin-bottom: 15px;
+}
+
+/*本文*/
+.home-content p {
+    line-height: 40px;
+}
+
+/* 背景画像 */
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#home {
+    position: relative;
+    background-image: url(../images/main-bg.jpg);
+    min-height: 100vh;
+}
+
+#home .page-title {
+    text-transform: none;
 }
