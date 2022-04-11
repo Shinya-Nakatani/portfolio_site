@@ -9,7 +9,8 @@ html {
 body{
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     line-height: 1.7;
-    color: #432;
+    color: #002538;
+    background: #b4aca4;
 }
 
 a {
@@ -102,12 +103,11 @@ nav ul li a {
     text-transform: none;
 }
 
-/*lead
+/*message
 ------------------------------------------------------*/
 #message {
-    background: #b4aca4;
     position: relative;
-    padding: 100px;
+    padding: 100px 100px 0px 100px;
 }
 
 .message-img {
@@ -129,15 +129,51 @@ nav ul li a {
 
 .message-content {
     text-align: center;
-    color: #002538;
-    padding-left: 150px;
+    padding-left: 15%;
 }
 
 .message-box h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .message-box p {
     font-size: 1rem;
-    margin: 15px 0 0 0 ;
+    margin: 30px 0 0 0;
+}
+
+/*workspace
+------------------------------------------------------*/
+#workspace {
+    position: relative;
+    padding: 100px;
+}
+
+.workspace-img {
+    background: url(../images/home2.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
+}
+
+.workspace-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.workspace-content {
+    text-align: center;
+    padding-right: 15%;
+}
+
+.workspace-box h2 {
+    font-family: 1.5rem;
+}
+
+.workspace-box p {
+    font-size: 1rem;
+    margin: 30px 0 0 0;
 }
