@@ -37,8 +37,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    color: #432;
+    background: #002538;
     text-align: center;
     padding: 20px;
 }
@@ -57,7 +56,7 @@ nav li {
 
 nav ul li a {
     text-decoration: none;
-    color: #666;
+    color: #b4aca4;
     padding: 10px;
 }
 
@@ -101,4 +100,44 @@ nav ul li a {
 
 #home .page-title {
     text-transform: none;
+}
+
+/*lead
+------------------------------------------------------*/
+#message {
+    background: #b4aca4;
+    position: relative;
+    padding: 100px;
+}
+
+.message-img {
+    background: url(../images/home3.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
+}
+
+.message-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.message-content {
+    text-align: center;
+    color: #002538;
+    padding-left: 150px;
+}
+
+.message-box h2 {
+    font-size: 1.3rem;
+}
+
+.message-box p {
+    font-size: 1rem;
+    margin: 15px 0 0 0 ;
 }
