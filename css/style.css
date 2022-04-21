@@ -24,7 +24,7 @@ img {
 /* HEADER
 ------------------------------------------------------*/
 .logo {
-    width: 150px;
+    width: 130px;
     margin-top: 15px;
 }
 
@@ -34,36 +34,53 @@ img {
     z-index: 999;
     height: 100px;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #002538;
-    text-align: center;
     padding: 20px;
 }
 
-/*レイアウトのCSS*/
-nav ul {
-    font-size: 1.25rem;
+.openbtn {
+    display: none;
+}
+
+.main-nav {
+    display: block;
+}
+
+.main-nav ul {
     list-style: none;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
-nav li {
-    margin-left: 36px;
-}
-
-nav ul li a {
+.main-nav li a {
+    display: block;
     text-decoration: none;
-    color: #b4aca4;
-    padding: 10px;
+    padding: 0 30px;
+    font-size: 1.25rem;
+    color: #fff;
 }
 
-.wrapper {
-    margin: 0 auto;
-    padding: 0 4%;
+#g-nav-list {
+    display: none;
+}
+
+#g-nav {
+    display: block;
+}
+
+#g-nav ul {
+    list-style: none;
+    font-size: 1.25rem;    
+}
+
+#g-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #002538;
+    padding: 10px 36px;
 }
 
 /*HOME
@@ -71,7 +88,8 @@ nav ul li a {
 .home-content {
     color: #fff;
     font-size: 1.5rem;
-    padding: 150px 200px;
+    padding-top: 150px;
+    margin-left: 150px;
     text-align: left;
 }
 
@@ -91,6 +109,7 @@ nav ul li a {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #home {
@@ -137,7 +156,7 @@ nav ul li a {
 }
 
 .message-box p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 30px 0 0 0;
 }
 
@@ -170,11 +189,11 @@ nav ul li a {
 }
 
 .workspace-box h2 {
-    font-family: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .workspace-box p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 30px 0 0 0;
 }
 
@@ -270,4 +289,155 @@ nav ul li a {
 
 small {
     font-size: 80%;
+}
+
+@media (max-width: 600px) {
+/*header
+------------------------------------------------------*/
+    .openbtn {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+        cursor: pointer;
+        top: 15px;
+        right: 15px;
+        width: 70px;
+        height: 70px;
+        border: 1px solid #fff;
+        background: #ab6333;
+    }
+
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+    }
+
+    .openbtn span:nth-of-type(1), 
+    .openbtn span:nth-of-type(3) {
+        height: 1px;
+        background: #fff;
+        width: 50px;
+        left: 10px;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 22px;
+        left: 10px;
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 53px;
+    }
+
+/*activeクラスが付与されるとMENUがｘになる
+------------------------------------------------------*/
+    .openbtn.active span:nth-of-type(1) {
+        top: 27px;
+        left: 16px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 60%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 39px;
+        left: 14px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 60%;
+    }
+
+/*ナビゲーション
+------------------------------------------------------*/
+    .main-nav {
+        display: none;
+    }
+
+    #g-nav.panelactive{
+        width:100%;
+        height: 100vh;
+    }
+    
+    /*丸の拡大*/
+    .circle-bg{
+        position: fixed;
+        z-index:3;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background:#ab6333;
+        transform: scale(0);
+        bottom:-50px;
+        left:calc(50% - 50px);
+        transition: all .6s;
+    }
+    
+    .circle-bg.circleactive{
+        transform: scale(50);
+    }
+    
+    /*ナビゲーションの縦スクロール*/
+    #g-nav-list{
+        position: fixed;
+        z-index: 999; 
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #g-nav.panelactive #g-nav-list{
+         display: block; 
+    }
+    
+    /*ナビゲーション*/
+    #g-nav ul {
+        opacity: 0;
+        position: absolute;
+        z-index: 999;
+        top:40%;
+        left:50%;
+        transform: translate(-50%,-40%);
+    }
+    
+    #g-nav.panelactive ul {
+        opacity:1;
+    }
+    
+    #g-nav.panelactive ul li{
+    animation-name:gnaviAnime;
+    animation-duration:1s;
+    animation-delay:.2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+   
+    
+    @keyframes gnaviAnime{
+    0% {
+    opacity: 0;
+    transform: translateY(100px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+    
+    .home-content {
+        font-size: 1.25rem;
+        margin-left: 10px;
+    }
+
+
 }
