@@ -235,6 +235,13 @@ img {
     text-align: center;
 }
 
+.map-address {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .map-address-area address {
     display: flex;
     justify-content: center;
@@ -440,4 +447,122 @@ small {
     }
 
 
+}
+
+@media (max-width: 1400px) {
+/*#message
+------------------------------------------------------*/
+    #message {
+        padding: 60px 150px;
+    }
+
+    .message-img {
+        height: 60vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .message-box {
+        display: block;
+    }
+
+    .message-box h2 {
+        margin-top: 30px;
+    }
+
+    .message-content {
+        width: 100%;
+        padding: 0;
+    }
+/*workspace
+------------------------------------------------------*/
+    #workspace {
+        padding: 60px 150px;
+    }
+
+    .workspace-img {
+        height: 60vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .workspace-box {
+        display: block;
+    }
+
+    .workspace-box h2 {
+        margin-top: 30px;
+    }
+
+    .workspace-content {
+        width: 100%;
+        padding: 0;
+    }
+
+/*#footer
+------------------------------------------------------*/
+    .footer-r {
+        width: 100%;
+    }
+
+    .map-area h2 {
+        width: 5%;
+    }
+
+    .footer-l {
+        width: 100%;
+    }
+
+    .footer-contact {
+        height: inherit;
+        padding: 40px 0;
+    }
+    #copyright {
+        height: inherit;
+        padding: 40px 0;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+/*#message
+------------------------------------------------------*/
+    #message {
+        padding: 60px 30px;
+    }
+
+    .message-img {
+        height: 40vh;
+    }
+/*workspace
+------------------------------------------------------*/
+    #workspace {
+        padding: 60px 30px;
+    }
+
+    .workspace-img {
+        height: 40vh;
+    }
+/*#footer
+------------------------------------------------------*/
+    .footer-r {
+        padding: 80px 30px;
+    }
+
+    .map-area {
+        margin: 0;
+    }
+
+    .map-area h2 {
+        width: 100%;
+        height: inherit;
+        margin: 0 0 50px 0;
+        -ms-writing-mode: lr-tb;
+        -webkit-writing-mode: horizontal tb;
+        writing-mode: horizontal-tb;
+    }
+
+    .map-address {
+        width: 48%;
+    }
 }
