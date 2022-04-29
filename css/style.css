@@ -267,6 +267,14 @@ img {
     overflow: hidden;
 }
 
+.iframe-area iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .footer-l {
     width: 30%;
     background: #ab6333;
@@ -440,11 +448,15 @@ small {
     transform: translateY(0);
     }
     }
+
     
+
     .home-content {
         font-size: 1.25rem;
         margin-left: 10px;
     }
+
+
 
 
 }
@@ -563,6 +575,11 @@ small {
     }
 
     .map-address {
-        width: 48%;
+        margin: 0 0 50px 0;
+        width: 100%;
+    }
+
+    .map-block {
+        width: 100%;
     }
 }
